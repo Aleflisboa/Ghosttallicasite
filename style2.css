@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    background-color: rgb(57, 54, 54);
+}
+.container {
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.poster-imagem {
+    width: 450px;
+    height: auto;
+    cursor: pointer;
+}
+
+.poster-imagem:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+}
+
+.modal-conteudo {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    top: 5%;
+}
+
+.modal-container {
+    display: flex;
+    height: 100%;
+    gap: 20px;
+}
+
+.lado-esquerdo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.lado-direito {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.minicontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 700px;
+    width: 450px;
+    opacity: 0.4;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 1000;
+}
