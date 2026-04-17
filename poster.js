@@ -3,40 +3,36 @@ const modal = document.getElementById("modal");
 const imgGrande = document.getElementById("img-grande");
 const fechar = document.querySelector(".fechar");
 
+const button = document.getElementById("btn-musica");
+const player = document.getElementById("player");
+
+let musicaAtual = "";
+
 // abrir modal
-imagens.forEach((img, index) => {
+imagens.forEach((img) => {
   img.addEventListener("click", () => {
     modal.style.display = "block";
     imgGrande.src = img.src;
 
-    carregarMiniaturas(index);
+    musicaAtual = img.getAttribute("data-audio");
   });
 });
 
-// fechar
+// botão toca música
+button.addEventListener("click", () => {
+  if (!musicaAtual) return;
+
+  player.pause();
+  player.currentTime = 0;
+
+  player.src = musicaAtual;
+  player.play();
+});
+
+// fechar modal
 fechar.onclick = () => modal.style.display = "none";
 
-// clicar fora
+// fechar clicando fora
 modal.onclick = (e) => {
   if (e.target === modal) modal.style.display = "none";
 };
-
-// criar miniaturas
-function carregarMiniaturas(indexAtual) {
-  miniaturas.innerHTML = "";
-
-  imagens.forEach((img, i) => {
-    const mini = document.createElement("img");
-    mini.src = img.src;
-
-    if (i === indexAtual) {
-      mini.style.opacity = "1";
-    }
-
-    mini.addEventListener("click", () => {
-      imgGrande.src = img.src;
-    });
-
-    miniaturas.appendChild(mini);
-  });
-}

@@ -11,13 +11,19 @@
 <body>
 
     <div class="container">
-        <img src="imagem/EVERFGARDEN2.png" alt="Poster" class="poster-imagem"></img>
-        <img src="imagem/Ferris-Wheel.png" alt="Poster" class="poster-imagem"></img>
-        <img src="imagem/Let-Bu(o)rn-again.png" alt="Poster" class="poster-imagem"></img>
-        <img src="imagem/Vicio2.png" alt="Poster" class="poster-imagem"></img>
-        <img src="imagem/223-flowers.png" alt="Poster" class="poster-imagem"></img>
-        <img src="imagem/Pixelated-kissesWPP.png" alt="Poster" class="poster-imagem"></img>
- 
+        <img src="imagem/EVERFGARDEN2.png" alt="Poster" class="poster-imagem"
+            data-audio="ghosttallica/music/sob-o-mesmo-ceu-azul.mp3"></img>
+        <img src="imagem/Ferris-Wheel.png" alt="Poster" class="poster-imagem"
+            data-audio="C:\Projeto\ghosttallica\music\ferris-wheel.mp3"></img>
+        <img src="imagem/Let-Bu(o)rn-again.png" alt="Poster" class="poster-imagem"
+            data-audio="C:\Projeto\ghosttallica\music\let-burn-again.mp3"></img>
+        <img src="imagem/Vicio2.png" alt="Poster" class="poster-imagem"
+            data-audio="C:\Projeto\ghosttallica\music\vicio2.mp3"></img>
+        <img src="imagem/223-flowers.png" alt="Poster" class="poster-imagem"
+            data-audio="C:\Projeto\ghosttallica\music\223-flowers.mp3"></img>
+        <img src="imagem/Pixelated-kissesWPP.png" alt="Poster" class="poster-imagem"
+            data-audio="C:\Projeto\ghosttallica\music\pixelated-kisses.mp3"></img>
+
     </div>
     <div id="modal" class="modal">
         <div class="modal-conteudo">
@@ -34,14 +40,24 @@
                 <!-- DIREITA (infos) -->
                 <div class="lado-direito">
                     <div class="minicontainer"></div>
+                    <div class="minicontainer"></div>
+
+                    <!-- PLAYER -->
+                    <audio id="player" controls></audio>
+
+                    <!-- BOTÃO -->
+                    <button id="btn-musica">Tocar</button>
+                    Tocar
+                    </button>
+
                 </div>
 
             </div>
 
         </div>
-        
+
     </div>
-<script src="poster.js"></script>
+    <script src="poster.js"></script>
 </body>
 
 </html>
