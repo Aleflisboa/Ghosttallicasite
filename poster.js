@@ -36,3 +36,10 @@ fechar.onclick = () => modal.style.display = "none";
 modal.onclick = (e) => {
   if (e.target === modal) modal.style.display = "none";
 };
+
+button.addEventListener("click", () => {
+  console.log("Caminho do áudio:", musicaAtual); // veja no console
+  if (!musicaAtual) return;
+  player.src = musicaAtual;
+  player.play();
+});
